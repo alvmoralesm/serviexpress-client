@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
+import { ServiciosService } from 'src/app/services/servicios.service';
 
 @Component({
   selector: 'app-servicios',
@@ -6,10 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servicios.page.scss'],
 })
 export class ServiciosPage implements OnInit {
-
-  constructor() { }
+  servicios = [];
+  constructor(
+    private serviciosService: ServiciosService,
+    private loadingCtrl: LoadingController
+  ) {}
 
   ngOnInit() {
+    this.listarServicios();
   }
 
+  async listarServicios() {
+    const loading = await this.loadingCtrl.create({
+      message: 'Cargando...',
+      spinner: 'bubbles',
+    });
+    await loading.present();
+    this.serviciosService.getServicios().subscribe((res) => {
+      loading.dismiss();
+      this.servicios = [...this.servicios];
+      console.log(res);
+    });
+  }
 }
