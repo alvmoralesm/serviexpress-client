@@ -14,6 +14,10 @@ const routes: Routes = [
         (m) => m.IniciarSesionPageModule
       ),
   },
+  {
+    path: 'crear-cuenta',
+    loadChildren: () => import('./pages/crear-cuenta/crear-cuenta.module').then( m => m.CrearCuentaPageModule)
+  },
 ];
 
 @NgModule({
