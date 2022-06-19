@@ -8,4 +8,12 @@
 
 <ion-content>
   <ion-title id="title">Listado de Servicios</ion-title>
+
+  <ion-card *ngFor="let item of servicios">
+    <ion-card-header>
+      <ion-card-title>{{item.descripcion}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content> {{item.comentario}} </ion-card-content>
+  </ion-card>
 </ion-content>
