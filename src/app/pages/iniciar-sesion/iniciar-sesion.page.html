@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-card id="header">
+    <ion-card-header>
+      <ion-card-title id="title-login">
+        <img
+          height="50em"
+          src="assets/images/logo-grande-serviexpress-dark.png"
+      /></ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-header>
+
+<ion-content id="content-wrapper">
+  <ion-card id="login-card">
+    <ion-card-header>
+      <ion-card-title id="title-login">Iniciar sesión</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label for="email" position="floating">Correo</ion-label>
+        <ion-input name="email" type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="contrasena" position="floating">Contraseña</ion-label>
+        <ion-input name="contrasena" type="password"></ion-input>
+      </ion-item>
+      <ion-button href="/servicios" class="ion-margin" expand="block"
+        >Iniciar sesion</ion-button
+      >
+      <hr />
+      <ion-row class="ion-text-center"
+        ><ion-col
+          ><a id="forgot" href="/iniciar-sesion"
+            >¿Olvidaste tu contraseña?</a
+          ></ion-col
+        ></ion-row
+      >
+      <ion-button
+        href="/crear-cuenta"
+        color="success"
+        class="ion-margin"
+        expand="block"
+        >Crear cuenta</ion-button
+      >
+    </ion-card-content>
+  </ion-card></ion-content
+>
