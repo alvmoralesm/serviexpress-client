@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'crear-cuenta',
     loadChildren: () => import('./pages/crear-cuenta/crear-cuenta.module').then( m => m.CrearCuentaPageModule)
   },
+  {
+    path: 'servicios',
+    loadChildren: () => import('./pages/servicios/servicios.module').then( m => m.ServiciosPageModule)
+  },
 ];
 
 @NgModule({
