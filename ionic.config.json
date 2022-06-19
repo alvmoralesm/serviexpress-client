@@ -1,0 +1,7 @@
+{
+  "name": "serviexpress-client",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
