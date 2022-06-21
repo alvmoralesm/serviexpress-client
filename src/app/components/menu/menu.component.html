@@ -1,0 +1,24 @@
+<ion-menu id="menu" side="start" menuId="first" contentId="main">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        <div style="text-align: center">
+          <img
+            height="50em"
+            src="assets/images/logo-grande-serviexpress-dark.png"
+          /></div
+      ></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item
+        *ngFor="let c of componentes | async"
+        [routerLink]="c.redirectTo"
+      >
+        <ion-icon slot="start" [name]="c.icon"></ion-icon
+        ><ion-label> {{ c.name }}</ion-label></ion-item
+      >
+    </ion-list>
+  </ion-content>
+</ion-menu>

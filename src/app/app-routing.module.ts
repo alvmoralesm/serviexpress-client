@@ -35,6 +35,14 @@ const routes: Routes = [
         (m) => m.ServiciosDetallePageModule
       ),
   },
+  {
+    path: 'reservas',
+    loadChildren: () => import('./pages/reservas/reservas.module').then( m => m.ReservasPageModule)
+  },
+  {
+    path: 'nosotros',
+    loadChildren: () => import('./pages/nosotros/nosotros.module').then( m => m.NosotrosPageModule)
+  },
 ];
 
 @NgModule({

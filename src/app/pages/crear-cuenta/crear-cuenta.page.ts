@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-crear-cuenta',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crear-cuenta.page.scss'],
 })
 export class CrearCuentaPage implements OnInit {
+  constructor(private menu: MenuController) {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  ionViewWillEnter() {
+    this.menu.enable(false);
   }
-
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController, MenuController } from '@ionic/angular';
 import { ServiciosService } from 'src/app/services/servicios.service';
 
 @Component({
@@ -10,13 +10,18 @@ import { ServiciosService } from 'src/app/services/servicios.service';
 export class ServiciosPage implements OnInit {
   constructor(
     private serviciosService: ServiciosService,
-    private loadingCtrl: LoadingController
+    private loadingCtrl: LoadingController,
+    private menu: MenuController
   ) {}
 
   servicios: any = [];
 
   ngOnInit() {
     this.listarServicios();
+  }
+
+  toggleMenu() {
+    this.menu.toggle();
   }
 
   async listarServicios() {

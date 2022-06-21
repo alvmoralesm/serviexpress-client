@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "build-outline",
+    "name": "Servicios",
+    "redirectTo": "/servicios"
+  },
+  {
+    "icon": "calendar-outline",
+    "name": "Reservas",
+    "redirectTo": "/reservas"
+  },
+  {
+    "icon": "help-circle-outline",
+    "name": "Nosotros",
+    "redirectTo": "/nosotros"
+  }
+]
