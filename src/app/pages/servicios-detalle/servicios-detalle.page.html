@@ -1,9 +1,27 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>servicios-detalle</ion-title>
+  <ion-toolbar id="toolbar">
+    <ion-title
+      ><img height="50em" src="assets/images/logo-grande-serviexpress-dark.png"
+    /></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card *ngFor="let servicio of servicios">
+    <ion-card-header>
+      <ion-card-subtitle
+        >Duraci&oacute;n: {{servicio.tiempo}} hrs</ion-card-subtitle
+      >
+      <ion-card-title>{{servicio.descripcion}}</ion-card-title>
+    </ion-card-header>
 
+    <ion-card-content>
+      {{servicio.comentario}} <br />
+      <br />
+      Valor de servicio: ${{servicio.valor}}
+    </ion-card-content>
+    <ion-button expand="block" color="success" id="agendar-button">
+      Agendar servicio</ion-button
+    >
+  </ion-card>
 </ion-content>

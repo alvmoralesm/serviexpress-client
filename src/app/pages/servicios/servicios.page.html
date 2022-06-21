@@ -9,11 +9,14 @@
 <ion-content>
   <ion-title id="title">Listado de Servicios</ion-title>
 
-  <ion-card *ngFor="let item of servicios">
+  <ion-card *ngFor="let servicio of servicios">
     <ion-card-header>
-      <ion-card-title>{{item.descripcion}}</ion-card-title>
+      <ion-card-title>{{servicio.descripcion}}</ion-card-title>
     </ion-card-header>
 
-    <ion-card-content> {{item.comentario}} </ion-card-content>
+    <ion-card-content> {{servicio.comentario}} </ion-card-content>
+    <ion-button id="detalle-button" expand="block" [routerLink]="[servicio.id]">
+      Ver m&aacute;s</ion-button
+    >
   </ion-card>
 </ion-content>

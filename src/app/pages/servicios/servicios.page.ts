@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
 import { ServiciosService } from 'src/app/services/servicios.service';
-import { HttpClient } from '@angular/common/http';
-import { ServicioInterface } from 'src/app/services/servicios.service';
 
 @Component({
   selector: 'app-servicios',
@@ -12,8 +10,7 @@ import { ServicioInterface } from 'src/app/services/servicios.service';
 export class ServiciosPage implements OnInit {
   constructor(
     private serviciosService: ServiciosService,
-    private loadingCtrl: LoadingController,
-    private http: HttpClient
+    private loadingCtrl: LoadingController
   ) {}
 
   servicios: any = [];
@@ -28,6 +25,7 @@ export class ServiciosPage implements OnInit {
       spinner: 'bubbles',
     });
     await loading.present();
+
     this.serviciosService.getServicios().subscribe((res) => {
       loading.dismiss();
       this.servicios = res;
