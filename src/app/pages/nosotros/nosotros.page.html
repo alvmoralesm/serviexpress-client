@@ -1,9 +1,43 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>nosotros</ion-title>
+  <ion-toolbar id="toolbar">
+    <ion-title>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="10">
+          <img
+            height="50em"
+            src="assets/images/logo-grande-serviexpress-dark.png"
+          />
+        </ion-col>
+      </ion-row>
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="toggleMenu()"
+        ><ion-icon slot="icon-only" name="menu"></ion-icon
+      ></ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-row
+    ><ion-col size="6" offset="3"
+      ><ion-title class="title">Sobre Nosotros </ion-title></ion-col
+    ></ion-row
+  >
+  <p id="about">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aliquam
+    vel facilis, reiciendis at temporibus quasi quia et ullam tenetur ab, totam
+    fuga impedit voluptatem, fugit unde in aspernatur inventore.
+  </p>
 
+  <ion-row
+    ><ion-col size="6" offset="3"
+      ><ion-title class="title">Nuestra misi&oacute;n </ion-title></ion-col
+    ></ion-row
+  >
+  <p id="about">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aliquam
+    vel facilis, reiciendis at temporibus quasi quia et ullam tenetur ab, totam
+    fuga impedit voluptatem, fugit unde in aspernatur inventore.
+  </p>
 </ion-content>

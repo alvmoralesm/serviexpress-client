@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-nosotros',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nosotros.page.scss'],
 })
 export class NosotrosPage implements OnInit {
+  constructor(private menu: MenuController) {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  toggleMenu() {
+    this.menu.toggle();
   }
-
 }

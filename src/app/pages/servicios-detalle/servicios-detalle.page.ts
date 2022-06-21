@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 import { ServiciosService } from 'src/app/services/servicios.service';
 
 @Component({
@@ -10,7 +11,8 @@ import { ServiciosService } from 'src/app/services/servicios.service';
 export class ServiciosDetallePage implements OnInit {
   constructor(
     private route: ActivatedRoute,
-    private serviciosService: ServiciosService
+    private serviciosService: ServiciosService,
+    private menu: MenuController
   ) {}
 
   servicios: any = [];
@@ -21,5 +23,9 @@ export class ServiciosDetallePage implements OnInit {
     this.serviciosService.getServicioDetalle(id).subscribe((res) => {
       this.servicios = res;
     });
+  }
+
+  toggleMenu() {
+    this.menu.toggle();
   }
 }
