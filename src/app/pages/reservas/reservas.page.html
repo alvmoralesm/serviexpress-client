@@ -20,4 +20,58 @@
 
 <ion-content>
   <ion-title id="title">Mis Reservas</ion-title>
+  <ion-button expand="block" (click)="openCalModal()"
+    ><ion-icon name="add" slot="icon-only"></ion-icon
+  ></ion-button>
+
+  <ion-row
+    ><ion-col size="2">
+      <ion-button fill="clear" (click)="prev()">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+
+    <ion-col size="8">
+      <h2 style="text-align: center; margin-top: 0.3em">{{viewTitle}}</h2>
+    </ion-col>
+
+    <ion-col size="2">
+      <ion-button fill="clear" (click)="next()">
+        <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+      </ion-button> </ion-col
+  ></ion-row>
+
+  <ion-segment [(ngModel)]="calendar.mode">
+    <ion-segment-button value="month">
+      <ion-label>Mes</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="week">
+      <ion-label>Semana</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="day">
+      <ion-label>D&iacute;a</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-row>
+    <ion-col size="6"
+      ><ion-button (click)="createRandomEvents()" expand="block" fill="outline"
+        >Agregar eventos</ion-button
+      ></ion-col
+    >
+
+    <ion-col size="6"
+      ><ion-button (click)="removeEvents()" expand="block" fill="outline"
+        >Eliminar eventos</ion-button
+      ></ion-col
+    ></ion-row
+  >
+
+  <calendar
+    [eventSource]="eventSource"
+    [calendarMode]="calendar.mode"
+    [currentDate]="calendar.currentDate"
+    [markDisabled]="markDisabled"
+    (onTitleChanged)="onViewTitleChanged($event)"
+  ></calendar>
 </ion-content>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 import { ServiciosService } from 'src/app/services/servicios.service';

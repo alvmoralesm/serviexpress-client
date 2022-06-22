@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'nosotros',
     loadChildren: () => import('./pages/nosotros/nosotros.module').then( m => m.NosotrosPageModule)
   },
+  {
+    path: 'cal-modal',
+    loadChildren: () => import('./pages/cal-modal/cal-modal.module').then( m => m.CalModalPageModule)
+  },
 ];
 
 @NgModule({

@@ -13,8 +13,8 @@ import { ServiciosDetallePage } from './servicios-detalle.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ServiciosDetallePageRoutingModule
+    ServiciosDetallePageRoutingModule,
   ],
-  declarations: [ServiciosDetallePage]
+  declarations: [ServiciosDetallePage],
 })
 export class ServiciosDetallePageModule {}

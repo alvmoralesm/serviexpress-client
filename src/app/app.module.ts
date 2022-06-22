@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentsModule } from './components/components.module';
+import { NgCalendarModule } from 'ionic2-calendar';
+import { CalModalPageModule } from './pages/cal-modal/cal-modal.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +19,8 @@ import { ComponentsModule } from './components/components.module';
     AppRoutingModule,
     HttpClientModule,
     ComponentsModule,
+    NgCalendarModule,
+    CalModalPageModule,
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
